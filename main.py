@@ -100,6 +100,9 @@ def interpretacion_de_comando(comando):
         respuesta = "--Pausa\n\n"
     elif params[0].lower() == 'rep':
         respuesta, reporte = com_rep(params[1:], particiones_montadas)
+    elif params[0].lower() == 'cl':
+        particiones_montadas = []
+        respuesta = "--se han limpiado las particiones cargadas\n\n"
     else:
         respuesta = "--Comando '"+params[0]+"' no reconocido"
         respuesta += "\n\n"
